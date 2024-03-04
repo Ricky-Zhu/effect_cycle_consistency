@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:image" content="static/images/structure.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
@@ -110,7 +110,7 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code (Coming Soon)</span>
                   </a>
                 </span>
 
@@ -203,7 +203,11 @@ method.
         <br>
         <img src="./static/images/motivation.png" style="width: 75%;">
         <div class="content has-text-justified">
-          We aim to align the effect of the transitions across domains. For instance, the effect of transition in Domain A is moving the gripper from the left side to the right side. The effect of the translated transition in the Domain B is expected to move the gripper from the left side to the right side as well.
+          <strong>Figure 1.</strong>
+          Unlike prior works which attempt to predict the next state for learning mapping functions, which is reported to be prone to compounding errors,
+          we aim to align the effect of the transitions across domains.
+          For instance, the effect of transition in Domain A is moving the gripper from the left side to the right side.
+          The effect of the translated transition in the Domain B is expected to move the gripper from the left side to the right side as well.
         </div>
       </div>
     </div>
@@ -216,21 +220,57 @@ method.
     <!-- Method Overview. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
+        <h2 class="title is-3">Method Overview</h2>
         <br>
-        <img src="./static/images/structure.png" style="width: 100%;">
+        <img src="./static/images/method_ill.png" style="width: 75%;">
         <div class="content has-text-justified">
-          <strong>Task Visualization.</strong> In real robot experiments, there are 25 tasks in base task stage and 5 new tasks in each lifelong task stage (Total: 5 lifelong task stages).
-          Different tasks either have distinct language descriptions, or they have the same language description but under different scenes.
+          <strong>Figure 2.</strong> We show the main terminologies from both the source domain and the target domains, and the main objective in our method.
 
         </div>
         <br>
-        <br>
+        <img src="./static/images/structure.png" style="width: 100%;">
+        <div class="content has-text-justified">
+          <strong>Figure 3.</strong> The training structure. We apply the same objectives of learning mapping functions from source domains to target domains to learning from target domains to source domains.
+          We attempt to discover the translated action distribution that can lead to the same effect in the target domain as the source domain.
+
+        </div>
 
       </div>
     </div>
     <!--/ Method Overview. -->
+    <br>
+    <hr>
+    <br>
 
+    <!-- results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiment Results</h2>
+        <br>
+        <img src="./static/images/tasks.png" style="width: 100%;">
+        <div class="content has-text-justified">
+          <strong>Figure 4.</strong>
+          Visualization of source domains and target domains. We carried out experiments on three locomotion tasks and two robotic manipulation tasks
+
+        </div>
+        <br>
+        <img src="./static/images/results.png" style="width: 100%;">
+        <div class="content has-text-justified">
+          <strong>TABLE I</strong> The performance of the transferred policy under different morphologies. (w.o. denotes without)
+
+        </div>
+        <br>
+
+        <img src="./static/images/icra_sup_demo.gif" style="width: 100%;">
+        <div class="content has-text-justified">
+          The behaviours of the transferred policies through the learned mapping functions.
+
+        </div>
+
+
+      </div>
+    </div>
+    <!-- results end. -->
 
   </div>
 </section>
@@ -242,32 +282,19 @@ method.
 <!--      <div id="results-carousel" class="carousel results-carousel">-->
 <!--       <div class="item">-->
 <!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>-->
+<!--        <img src="static/images/method_ill.png" style="width: 750%;" alt="MY ALT TEXT"/>-->
 <!--        <h2 class="subtitle has-text-centered">-->
 <!--          First image description.-->
 <!--        </h2>-->
 <!--      </div>-->
 <!--      <div class="item">-->
 <!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>-->
+<!--        <img src="static/images/structure.png" alt="MY ALT TEXT"/>-->
 <!--        <h2 class="subtitle has-text-centered">-->
 <!--          Second image description.-->
 <!--        </h2>-->
 <!--      </div>-->
-<!--      <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--         Third image description.-->
-<!--       </h2>-->
-<!--     </div>-->
-<!--     <div class="item">-->
-<!--      &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>-->
-<!--      <h2 class="subtitle has-text-centered">-->
-<!--        Fourth image description.-->
-<!--      </h2>-->
-<!--    </div>-->
+
 <!--  </div>-->
 <!--</div>-->
 <!--</div>-->
@@ -352,12 +379,12 @@ method.
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
+<!--  <section class="section" id="BibTeX">-->
+<!--    <div class="container is-max-desktop content">-->
+<!--      <h2 class="title">BibTeX</h2>-->
+<!--      <pre><code>BibTex Code Here</code></pre>-->
+<!--    </div>-->
+<!--</section>-->
 <!--End BibTex citation -->
 
 
